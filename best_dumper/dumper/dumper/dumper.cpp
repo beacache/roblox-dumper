@@ -113,6 +113,8 @@ namespace dumper {
 #undef RUN_STAGE
 #undef RUN_STAGE_CRITICAL
 
+        logger::info("starting internal offset dumper (8s)...");
+        
         internal::internal();
 
         size_t total_offsets = 0;
@@ -129,5 +131,6 @@ namespace dumper {
         logger::info("dumping completed in {} ms", m_elapsed_time.count());
         return true;
     }
+
 
 }
