@@ -24,10 +24,10 @@ int main() {
     auto version = process::g_process.get_version();
     if (version) logger::info("version -> {}", *version);
 
-    logger::info("starting fflag dumper...");
+    logger::info("starting fflag dumper (2s)...");
     fflags::fflags();
 
-    logger::info("starting offset dumper...");
+    logger::info("starting offset dumper (25-40s)...");
     if (!dumper::g_dumper.run()) {
         logger::error("dumping failed");
     }
@@ -64,4 +64,5 @@ int main() {
     logger::info("press enter to exit...");
     std::cin.get();
     return 0;
+
 }
